@@ -118,7 +118,7 @@ const AboutPage = () => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
     
-    const startDate = new Date("2021-11-06");
+    const startDate = new Date("2022-21-07");
     const today = new Date();
     const experience = today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
@@ -161,7 +161,7 @@ const AboutPage = () => {
       color: "from-[#6366f1] to-[#a855f7]",
       value: totalProjects,
       label: "Total Projects",
-      description: "Innovative web solutions crafted",
+      description: "Innovative Software solutions created",
       animation: "fade-right",
     },
     {

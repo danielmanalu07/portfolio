@@ -1,36 +1,125 @@
-# Personal Portfolio Website in React
+Here’s the translation of your text to English:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="https://user-images.githubusercontent.com/50160672/174933373-1ba6cadf-1c9a-48c3-aa58-984d0bd62d82.png">
+# Portfolio V5
 
-Built using:
+Hello everyone!  
+Let me introduce myself, I’m Daniel Pandapotan Manalu. On this occasion, I’d like to share the portfolio website project that I’ve developed.
 
-- Front-end library: React
-- CSS framework: React-bootstrap
-- CSS animations library: Animate.css
+**Tech Stack used:**
 
-In the /personal-portfolio, you can run:
+- ReactJS
+- Tailwind CSS
+- AOS
+- Firebase
+- Framer Motion
+- Lucide
+- Material UI
+- SweetAlert2
 
-### `npm start`
+We would appreciate it if you decide to use this project. Please include credit when using it. Thank you! 🙏
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Tutorial: Running the Project
 
-### `npm test`
+Here’s a simple guide to run this project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+Ensure that you have already installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Node.js**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Steps to Run the Project
+
+1. **Download this project:**
+
+   ```bash
+   https://github.com/danielmanalu07/portfolio.git
+   ```
+
+2. **Install all dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+   Or use:
+
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+
+3. **Run the project:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser:**
+
+   Access the application through the link displayed in your terminal.
+
+---
+
+## Creating a Production Build
+
+To create a production-ready build:
+
+1. Run the build command:
+
+   ```bash
+   npm run build
+   ```
+
+2. The build files will be saved in the `dist` folder. You can upload this folder to your hosting server.
+
+---
+
+## Notes
+
+If you encounter issues while running the project, ensure that:
+
+- Node.js is correctly installed.
+- You’re in the correct project directory.
+- All dependencies are installed without errors.
+
+---
+
+## Firebase Configuration
+
+To configure Firebase for this project, follow these steps:
+
+1. **Add Firebase to the Project:**
+
+   - Go to the [Firebase Console](https://console.firebase.google.com/).
+   - Create a new project or use an existing one.
+
+2. **Enable Firestore Database:**
+
+   - Create a database.
+
+3. **Go to Project Settings:**
+
+   - Click the settings icon.
+   - Copy the Firebase configuration.
+
+4. **Go to Rules:**
+
+   - Set the rules to `true`.
+
+5. **Adjust the Collection Structure:**
+
+   - Set up the collections as shown in the following images:
+
+   ![Collection Structure Example 1](https://github.com/user-attachments/assets/38580122-08a4-4499-a8fd-0f253652a239)  
+   ![Collection Structure Example 2](https://github.com/user-attachments/assets/d563d7ad-f1ab-46ff-8185-640dcebd0363)
+
+6. **Update `firebase.js` and `firebase-comment.js` Files:**
+   - Replace the `firebaseConfig` content with your Firebase configuration.
+
+---

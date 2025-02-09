@@ -60,7 +60,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
       setTimeout(() => {
         onLoadingComplete?.();
       }, 1000);
-    }, 5000);
+    }, 5500);
     
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);

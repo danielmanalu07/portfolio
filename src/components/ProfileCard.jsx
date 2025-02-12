@@ -18,7 +18,7 @@ export default function ProfileCard() {
   const { debug } = useControls(shouldShowDebugButton ? { debug: false } : {});
 
   return (
-    <Canvas camera={{ position: [0, 0, 13], fov: 15 }}>
+    <Canvas camera={{ position: [0, 0, 13], fov: 13 }}>
       <ambientLight intensity={Math.PI} />
       <Physics debug={debug} interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
         <Band />

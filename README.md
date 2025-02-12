@@ -2,7 +2,7 @@ Here’s the translation of your text to English:
 
 ---
 
-# Portfolio V5
+# Portfolio
 
 Hello everyone!  
 Let me introduce myself, I’m Daniel Pandapotan Manalu. On this occasion, I’d like to share the portfolio website project that I’ve developed.

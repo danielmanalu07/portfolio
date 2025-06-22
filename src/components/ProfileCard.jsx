@@ -73,7 +73,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   );
   // Load QR code texture - ganti URL ini dengan URL QR code Anda
   const qrTexture = useTexture(
-    "https://res.cloudinary.com/dkzcgnhza/image/upload/v1739352528/Daniel_P._MAnalu_1_ldadyg.png"
+    "https://res.cloudinary.com/dkzcgnhza/image/upload/v1750569972/qr-code_sukkfc.png"
   );
 
   const { width, height } = useThree((state) => state.size);

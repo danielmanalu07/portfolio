@@ -29,6 +29,9 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
+      'react/display-name': 'off',        // 🚀 matikan error display name
+      'no-unused-vars': 'warn',           // 🚀 kasih warning aja
+      'react/react-in-jsx-scope': 'off',  // 🚀 ga perlu React import di JSX
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

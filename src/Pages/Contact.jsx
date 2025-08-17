@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Share2, User, Mail, MessageSquare, Send } from "lucide-react";
-import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks";
 import Komentar from "../components/Commentar";
 import Swal from "sweetalert2";
@@ -34,30 +33,30 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     Swal.fire({
-      title: 'Sending Message...',
-      html: 'Please wait while we send your message',
+      title: "Sending Message...",
+      html: "Please wait while we send your message",
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
-      }
+      },
     });
 
     try {
       // Get form data
       const form = e.target;
-      const formData = new FormData(form);
+      // const formData = new FormData(form);
 
       // Submit form
       await form.submit();
 
       // Show success message
       Swal.fire({
-        title: 'Success!',
-        text: 'Your message has been sent successfully!',
-        icon: 'success',
-        confirmButtonColor: '#6366f1',
+        title: "Success!",
+        text: "Your message has been sent successfully!",
+        icon: "success",
+        confirmButtonColor: "#6366f1",
         timer: 2000,
-        timerProgressBar: true
+        timerProgressBar: true,
       });
 
       // Reset form
@@ -68,10 +67,10 @@ const ContactPage = () => {
       });
     } catch (error) {
       Swal.fire({
-        title: 'Error!',
-        text: 'Something went wrong. Please try again later.',
-        icon: 'error',
-        confirmButtonColor: '#6366f1'
+        title: "Error!",
+        text: "Something went wrong. Please try again later." + error,
+        icon: "error",
+        confirmButtonColor: "#6366f1",
       });
     } finally {
       setIsSubmitting(false);
@@ -104,7 +103,7 @@ const ContactPage = () => {
           data-aos-duration="1100"
           className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
         >
-          Got a question? Send me a message, and I'll get back to you soon.
+          Got a question? Send me a message, and I&apos;ll get back to you soon.
         </p>
       </div>
 
@@ -124,13 +123,16 @@ const ContactPage = () => {
                   Get in Touch
                 </h2>
                 <p className="text-gray-400">
-                Anything you'd like to discuss further? Send me a message.
+                  <span>
+                    Anything you&apos;d like to discuss further? Send me a
+                    message.
+                  </span>
                 </p>
               </div>
               <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" />
             </div>
 
-            <form 
+            <form
               action="https://formsubmit.co/danielmanalu101@gmail.com"
               method="POST"
               onSubmit={handleSubmit}
@@ -198,7 +200,7 @@ const ContactPage = () => {
                 className="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <Send className="w-5 h-5" />
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
 

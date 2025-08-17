@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Eye, ArrowRight, ExternalLink } from 'lucide-react';
+import { useState } from "react";
+import PropTypes from "prop-types";
+import { Eye, ArrowRight, ExternalLink } from "lucide-react";
 
 const ProjectCardModal = ({ title, description, link }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,13 @@ const ProjectCardModal = ({ title, description, link }) => {
       )}
     </>
   );
+};
+
+// Add prop validation to the component
+ProjectCardModal.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string, // Link is not required as it may be optional
 };
 
 export default ProjectCardModal;

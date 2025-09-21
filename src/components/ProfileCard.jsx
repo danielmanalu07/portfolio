@@ -80,12 +80,14 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   const [curve] = useState(
     () =>
       new THREE.CatmullRomCurve3([
-        new THREE.Vector3(),
-        new THREE.Vector3(),
-        new THREE.Vector3(),
-        new THREE.Vector3(),
+        new THREE.Vector3(), // card
+        new THREE.Vector3(), // j3
+        new THREE.Vector3(), // j2
+        new THREE.Vector3(), // j1
+        new THREE.Vector3(), // fixed
       ])
   );
+
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
 
@@ -131,10 +133,12 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
           delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed))
         );
       });
-      curve.points[0].copy(j3.current.translation());
-      curve.points[1].copy(j2.current.lerped);
-      curve.points[2].copy(j1.current.lerped);
-      curve.points[3].copy(fixed.current.translation());
+      curve.points[0].copy(card.current.translation()); // sambungan ke card
+      curve.points[1].copy(j3.current.translation());
+      curve.points[2].copy(j2.current.lerped);
+      curve.points[3].copy(j1.current.lerped);
+      curve.points[4].copy(fixed.current.translation());
+
       band.current.geometry.setPoints(curve.getPoints(32));
       ang.copy(card.current.angvel());
       rot.copy(card.current.rotation());
